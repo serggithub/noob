@@ -60,13 +60,51 @@ public class App {
         printArray(a);
 
 
+        int [] m = new int[20];
+        m [0] = 1;
+        m [1] = 2;
+
+        /* variant 1*/
+        /* for (int i = 2; i < 20; i++){
+            int x = m[i-1] + m[i-2];
+            m[i] = x;
+        } */
+
+        /* varinat 2*/
+        /* int i = 2;
+        while (i<20){
+            int x = m[i-1] + m[i-2];
+            m[i] = x;
+            i++;
+        }*/
+
+        /*variant 3*/
+        int  i=2;
+        do{
+            int x = m[i-1] + m[i-2];
+            m[i] = x;
+            i++;
+        }
+        while (i<20);
+        printArray(m);
+
+
+        int x=1,y=2;
+        for (i = 2; i < 20; i++){
+            int z = y+x;
+        System.out.print(z +" ");
+         x = y;
+         y = z;
+        }
+
+
 
 
     }
 
     private static void printArray(int[] a) {
         for (int i = 0; i < a.length; i++)
-            System.out.print(a[i]);
+            System.out.print(a[i] + " ");
         System.out.println();
     }
 
