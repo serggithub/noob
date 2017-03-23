@@ -102,32 +102,36 @@ public class App {
         }
         System.out.println();
 
-        List<Integer> list=new ArrayList<>();
-        for (int l=0; l<20; l++)
+        List<Integer> list = new ArrayList<>();
+        for (int l = 0; l < 20; l++)
             list.add(l);
-         printArray(list);
+        printArray(list);
 
 
-
-        List<Integer> list2=new LinkedList<>();
-        for (int l=0; l<10000000; l++)
+        List<Integer> list2 = new LinkedList<>();
+        for (int l = 0; l < 100; l++)
             list2.add(l);
         //printArray(list2);
-        long t1=System.currentTimeMillis();
+        long t1 = System.currentTimeMillis();
 
-        System.out.println(list2.contains(9999999));
-        long t2=System.currentTimeMillis();
-        System.out.println(t2-t1);
+        System.out.println(list2.contains(99));
+        long t2 = System.currentTimeMillis();
+        System.out.println(t2 - t1);
 
 
-        Set<Integer> list3=new HashSet<>();
-        for (int l=0; l<10000000; l++)
+        Set<Integer> list3 = new HashSet<>();
+        for (int l = 0; l < 100; l++)
             list3.add(l);
         //printArray(list3);
-        long n1=System.currentTimeMillis();
-        System.out.println(list3.contains(9999999));
-        long n2=System.currentTimeMillis();
-        System.out.println(n2-n1);
+        long n1 = System.currentTimeMillis();
+        System.out.println(list3.contains(99));
+        long n2 = System.currentTimeMillis();
+        System.out.println(n2 - n1);
+
+        new Prime().main(2000,3000);
+
+
+
     }
 
 
@@ -140,16 +144,14 @@ public class App {
 
 
 
-    private static void printArray(Collection<Integer> listo4ek){
+
+
+
+    private static void printArray(Collection<Integer> listo4ek) {
         for (int x : listo4ek)
             System.out.print(x + " ");
         System.out.println();
     }
-
-
-
-
-
 
 
     private static void printArray(int[] a) {
@@ -196,7 +198,7 @@ class App2 implements Piska {
 }
 
 
-interface Piska{
+interface Piska {
     int piskaVstala();
 
 }
